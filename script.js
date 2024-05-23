@@ -37,7 +37,7 @@ function Simpan(){
 
     jQuery.ajax({
         type: 'POST',
-        url: 'http://localhost:12345/api/reservation/messages/post',
+        url: 'https://reservasirabi-ryzens-projects-a70d0bd2.vercel.app/api/reservation/messages/post',
         contentType: 'application/json',
         data: JSON.stringify(formData),
         success: function (response) {
@@ -57,77 +57,77 @@ function Simpan(){
 
 
 }
+function GetAllMessages() {
+    jQuery.ajax({
+        type: 'GET',
+        url: 'https://reservasirabi-ryzens-projects-a70d0bd2.vercel.app/api/reservation/messages', // PHP script that fetches data using curl
+        dataType: 'json', // Expect JSON response
+        success: function (response) {
+            // Process JSON response from PHP script
+            var urlAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUn6XT-UkJj941QgtGVVYLHY26JtQlId7rOeglSiEUQ&s';
 
-function GetAllMessages(){
-  jQuery.ajax({
-      type: 'GET',
-      url: 'http://localhost:12345/api/reservation/messages',
-      contentType: 'application/json',
-      success: function (response) {
-          // Proses respons dari server
-          
-          var urlAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZUn6XT-UkJj941QgtGVVYLHY26JtQlId7rOeglSiEUQ&s';
-          // Misalnya, jika respons berupa array objek pesan
-          response.forEach(function(message) {
-
+            // Sort response array by timestamp
             response.sort(function(a, b) {
-              // Menggunakan properti timestamp sebagai contoh
-              return new Date(b.timestamp) - new Date(a.timestamp);
-          });
-            var konfirmasiIcon;
-            var konfirmasiText;
-            
-            // Menentukan ikon dan teks konfirmasi
-            if (message.konfirmasi.toLowerCase() === 'hadir') {
-                konfirmasiIcon = '<i class="fas fa-check-circle" style="color:green;"></i>';
-                konfirmasiText = 'Hadir';
-            } else {
-                konfirmasiIcon = '<i class="fas fa-times-circle" style="color:red;"></i>';
-                konfirmasiText = 'Tidak Hadir';
-            }
+                return new Date(b.timestamp) - new Date(a.timestamp);
+            });
 
+            // Iterate through each message in the response
+            response.forEach(function(message) {
+                var konfirmasiIcon;
+                var konfirmasiText;
 
-              var newComment = `
-                  <li class="comment even thread-even depth-1 cui-item-comment" data-likes="0">
-                      <div class="cui-comment cui-clearfix">
-                          <!-- Avatar -->
-                          <div class="cui-comment-avatar">
-                              <!-- Bisa tambahkan gambar jika ada -->
-                              <img src="${urlAvatar}" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
-                          </div>
-                          <!-- Pesan -->
-                          <div class="cui-comment-content">
-                              <!-- Info -->
-                              <div class="cui-comment-info">
-                                  <a title="${message.nama_pengirim}" class="cui-commenter-name">${message.nama_pengirim}</a>
-                                  <span class="cui-post-author-mark cui-post-author-hadir">${konfirmasiIcon}</span>
-                              </div>
-                              <!-- Ucapan -->
-                              <div class="cui-comment-text">
-                                  <p>${message.ucapan}</p>
-                              </div>
-                              <!-- Tindakan -->
-                              <div class="cui-comment-actions">
-                                  <span class="cui-comment-time">
-                                      <i class="far fa-clock">
-                                          Beberapa detik lalu
-                                      </i>
-                                  </span>
-                              </div>
-                          </div>
-                      </div>
-                  </li>
-              `;
-              // Tambahkan elemen <li> ke <ul>
-              jQuery('#cui-container-comment-17372').append(newComment);
-          });
-      },
-      error: function (error) {
-          console.error('Error:', error);
-          alert('Terjadi kesalahan saat mengambil pesan.');
-      }
-  });
+                // Determine icon and confirmation text based on message.konfirmasi
+                if (message.konfirmasi.toLowerCase() === 'hadir') {
+                    konfirmasiIcon = '<i class="fas fa-check-circle" style="color:green;"></i>';
+                    konfirmasiText = 'Hadir';
+                } else {
+                    konfirmasiIcon = '<i class="fas fa-times-circle" style="color:red;"></i>';
+                    konfirmasiText = 'Tidak Hadir';
+                }
+
+                // Construct new comment HTML
+                var newComment = `
+                    <li class="comment even thread-even depth-1 cui-item-comment" data-likes="0">
+                        <div class="cui-comment cui-clearfix">
+                            <!-- Avatar -->
+                            <div class="cui-comment-avatar">
+                                <img src="${urlAvatar}" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+                            </div>
+                            <!-- Comment Content -->
+                            <div class="cui-comment-content">
+                                <!-- Commenter Info -->
+                                <div class="cui-comment-info">
+                                    <a title="${message.nama_pengirim}" class="cui-commenter-name">${message.nama_pengirim}</a>
+                                    <span class="cui-post-author-mark cui-post-author-hadir">${konfirmasiIcon}</span>
+                                </div>
+                                <!-- Comment Text -->
+                                <div class="cui-comment-text">
+                                    <p>${message.ucapan}</p>
+                                </div>
+                                <!-- Comment Actions -->
+                                <div class="cui-comment-actions">
+                                    <span class="cui-comment-time">
+                                        <i class="far fa-clock">
+                                            Beberapa detik lalu
+                                        </i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                `;
+
+                // Append new comment HTML to the designated container
+                jQuery('#cui-container-comment-17372').append(newComment);
+            });
+        },
+        error: function (error) {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan saat mengambil pesan.');
+        }
+    });
 }
+
 
 
 function getNamaDariURL() {
