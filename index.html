@@ -497,7 +497,6 @@
         line-height: 1.6;
       }
     </style>
-    <link rel='stylesheet' id='uaf_client_css-css' href='https://inv.punakawandigital.id/wp-content/uploads/useanyfont/uaf.css?ver=1705995369' media='all' />
     <link rel='stylesheet' id='wdp-centered-css-css' href='https://inv.punakawandigital.id/wp-content/plugins/weddingpress/assets/css/wdp-centered-timeline.min.css?ver=6.5.3' media='all' />
     <link rel='stylesheet' id='wdp-horizontal-css-css' href='https://inv.punakawandigital.id/wp-content/plugins/weddingpress/assets/css/wdp-horizontal-styles.min.css?ver=6.5.3' media='all' />
     <link rel='stylesheet' id='wdp-fontello-css-css' href='https://inv.punakawandigital.id/wp-content/plugins/weddingpress/assets/css/wdp-fontello.css?ver=6.5.3' media='all' />
@@ -1046,7 +1045,7 @@
                   </div>
                 </div>
               </div>
-              <div class="elementor-element elementor-element-53630646 elementor-absolute elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-lottie" data-id="53630646" data-element_type="widget" data-settings="{&quot;source_json&quot;:{&quot;url&quot;:&quot;https:\/\/inv.punakawandigital.id\/wp-content\/uploads\/2023\/07\/bird-hitam-1.json&quot;,&quot;id&quot;:17398,&quot;size&quot;:&quot;&quot;},&quot;loop&quot;:&quot;yes&quot;,&quot;_position&quot;:&quot;absolute&quot;,&quot;source&quot;:&quot;media_file&quot;,&quot;caption_source&quot;:&quot;none&quot;,&quot;link_to&quot;:&quot;none&quot;,&quot;trigger&quot;:&quot;arriving_to_viewport&quot;,&quot;viewport&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:{&quot;start&quot;:0,&quot;end&quot;:100}},&quot;play_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1,&quot;sizes&quot;:[]},&quot;start_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;0&quot;,&quot;sizes&quot;:[]},&quot;end_point&quot;:{&quot;unit&quot;:&quot;%&quot;,&quot;size&quot;:&quot;100&quot;,&quot;sizes&quot;:[]},&quot;renderer&quot;:&quot;svg&quot;}" data-widget_type="lottie.default">
+              <div class="elementor-element elementor-element-53630646 elementor-absolute elementor-align-center wdp-sticky-section-no elementor-widget elementor-widget-lottie" data-id="53630646" data-element_type="widget"  data-widget_type="lottie.default">
                 <div class="elementor-widget-container">
                   <style>
                     /*! elementor-pro - v3.13.2 - 22-05-2023 */
@@ -1681,7 +1680,13 @@
                                 <span class="elementor-button-icon elementor-align-icon-left">
                                   <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
                                 </span>
-                                <span class="elementor-button-text">Lihat Lokasi</span>
+                                <!-- <a href="https://maps.app.goo.gl/8oH4RwdBuVGaU3Rx9" class="elementor-button-text">Lihat Lokasi</a> -->
+                                <button id="lihat-lokasi" style="border: none;" onclick='panggiLokasi()' class="elementor-button-text">Lihat Lokasi</button>
+                                <script>
+                                  function panggiLokasi(){
+window.location.assign("https://maps.app.goo.gl/8oH4RwdBuVGaU3Rx9");
+                                  }
+                                </script>
                               </span>
                             </a>
                           </div>
@@ -1731,7 +1736,13 @@
                                 <span class="elementor-button-icon elementor-align-icon-left">
                                   <i aria-hidden="true" class="fas fa-map-marker-alt"></i>
                                 </span>
-                                <span class="elementor-button-text">Lihat Lokasi</span>
+        <button id="lihat-lokasi" style="border: none;" onclick='panggiLokasi()' class="elementor-button-text">Lihat Lokasi</button>
+                                <script>
+                                  function panggiLokasi(){
+window.location.assign("https://maps.app.goo.gl/8oH4RwdBuVGaU3Rx9");
+                                  }
+                                </script>
+                                <!-- <span class="elementor-button-text">Lihat Lokasi</span> -->
                               </span>
                             </a>
                           </div>
@@ -1764,7 +1775,7 @@
                       </div>
                       <div class="elementor-element elementor-element-12bdba93 revealin wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="12bdba93" data-element_type="widget" data-widget_type="heading.default">
                         <div class="elementor-widget-container">
-                          <h2 class="elementor-heading-title elementor-size-default">Minggu, 28 Januari 2024</h2>
+                          <h2 class="elementor-heading-title elementor-size-default">Minggu, 30 Juni 2024</h2>
                         </div>
                       </div>
                       <div class="elementor-element elementor-element-19e37f52 revealin wdp-sticky-section-no elementor-widget elementor-widget-text-editor" data-id="19e37f52" data-element_type="widget" data-widget_type="text-editor.default">
@@ -2247,19 +2258,23 @@ Aamiin ya rabbal alamin
                                             }
                                           </style>
                                           <script>
-                                            function copyText(el) {
-                                              var content = jQuery(el).siblings('div.copy-content').html()
-                                              var temp = jQuery(" < textarea > ");
-                                                jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message')) var counter = 0;
-                                                var interval = setInterval(function() {
-                                                  counter++;
-                                                  if (counter == 1) {
-                                                    jQuery(el).html(text)
-                                                  }
-                                                }, 500);
-                                              }
+                                            function CallLocation(){
+                console.log("Dipanggil  Lokasi ");
+            }
+
+                                            // function copyText(el) {
+                                            //   var content = jQuery(el).siblings('div.copy-content').html()
+                                            //   var temp = jQuery(" < textarea > ");
+                                            //     jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
+                                            //     var text = jQuery(el).html()
+                                            //     jQuery(el).html(jQuery(el).data('message')) var counter = 0;
+                                            //     var interval = setInterval(function() {
+                                            //       counter++;
+                                            //       if (counter == 1) {
+                                            //         jQuery(el).html(text)
+                                            //       }
+                                            //     }, 500);
+                                            //   }
                                           </script>
                                         </div>
                                       </div>
@@ -2324,19 +2339,7 @@ Aamiin ya rabbal alamin
                                             }
                                           </style>
                                           <script>
-                                            function copyText(el) {
-                                              var content = jQuery(el).siblings('div.copy-content').html()
-                                              var temp = jQuery(" < textarea > ");
-                                                jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message')) var counter = 0;
-                                                var interval = setInterval(function() {
-                                                  counter++;
-                                                  if (counter == 1) {
-                                                    jQuery(el).html(text)
-                                                  }
-                                                }, 500);
-                                              }
+                                            
                                           </script>
                                         </div>
                                       </div>
@@ -3034,7 +3037,7 @@ Aamiin ya rabbal alamin
     <script src="https://inv.punakawandigital.id/wp-content/plugins/weddingpress/addons/comment-kit2//js/libs/jquery.textareaCounter.js?ver=2.0" id="cui_textCounter-js"></script>
     <script src="https://inv.punakawandigital.id/wp-content/plugins/weddingpress/addons/comment-kit2//js/libs/jquery.placeholder.min.js?ver=2.0.7" id="cui_placeholder-js"></script>
     <script src="https://inv.punakawandigital.id/wp-content/plugins/weddingpress/addons/comment-kit2//js/libs/autosize.min.js?ver=1.14" id="cui_autosize-js"></script>
-    <script src="https://inv.punakawandigital.id/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
+    <!-- <script src="https://inv.punakawandigital.id/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script> -->
     <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor-pro/assets/lib/lottie/lottie.min.js?ver=5.6.6" id="lottie-js"></script>
     <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js?ver=1.2.0" id="elementor-gallery-js"></script>
     <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.13.2" id="elementor-pro-webpack-runtime-js"></script>
@@ -3050,89 +3053,7 @@ Aamiin ya rabbal alamin
         'text direction\u0004ltr': ['ltr']
       });
     </script>
-    <script id="elementor-pro-frontend-js-before">
-      var ElementorProFrontendConfig = {
-        "ajaxurl": "https:\/\/inv.punakawandigital.id\/wp-admin\/admin-ajax.php",
-        "nonce": "7b90ea6765",
-        "urls": {
-          "assets": "https:\/\/inv.punakawandigital.id\/wp-content\/plugins\/elementor-pro\/assets\/",
-          "rest": "https:\/\/inv.punakawandigital.id\/wp-json\/"
-        },
-        "shareButtonsNetworks": {
-          "facebook": {
-            "title": "Facebook",
-            "has_counter": true
-          },
-          "twitter": {
-            "title": "Twitter"
-          },
-          "linkedin": {
-            "title": "LinkedIn",
-            "has_counter": true
-          },
-          "pinterest": {
-            "title": "Pinterest",
-            "has_counter": true
-          },
-          "reddit": {
-            "title": "Reddit",
-            "has_counter": true
-          },
-          "vk": {
-            "title": "VK",
-            "has_counter": true
-          },
-          "odnoklassniki": {
-            "title": "OK",
-            "has_counter": true
-          },
-          "tumblr": {
-            "title": "Tumblr"
-          },
-          "digg": {
-            "title": "Digg"
-          },
-          "skype": {
-            "title": "Skype"
-          },
-          "stumbleupon": {
-            "title": "StumbleUpon",
-            "has_counter": true
-          },
-          "mix": {
-            "title": "Mix"
-          },
-          "telegram": {
-            "title": "Telegram"
-          },
-          "pocket": {
-            "title": "Pocket",
-            "has_counter": true
-          },
-          "xing": {
-            "title": "XING",
-            "has_counter": true
-          },
-          "whatsapp": {
-            "title": "WhatsApp"
-          },
-          "email": {
-            "title": "Email"
-          },
-          "print": {
-            "title": "Print"
-          }
-        },
-        "facebook_sdk": {
-          "lang": "id_ID",
-          "app_id": ""
-        },
-        "lottie": {
-          "defaultAnimationUrl": "https:\/\/inv.punakawandigital.id\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"
-        }
-      };
-    </script>
-    <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2" id="elementor-pro-frontend-js"></script>
+    <!-- <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.13.2" id="elementor-pro-frontend-js"></script> -->
     <script src="https://inv.punakawandigital.id/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
     <script src="https://inv.punakawandigital.id/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
     <script id="elementor-frontend-js-before">

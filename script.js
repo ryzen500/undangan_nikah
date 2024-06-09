@@ -129,7 +129,12 @@ function GetAllMessages() {
 }
 
 
+function CallLocation() {
+    alert("Span clicked!");
+    // You can add more code here to perform any actions you need
+}
 
+// Attach the click event to the span
 function getNamaDariURL() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get('to');
