@@ -77,9 +77,9 @@ function GetAllMessages() {
                 var konfirmasiText;
 
                 // Determine icon and confirmation text based on message.konfirmasi
-                if (message.konfirmasi.toLowerCase() === 'hadir') {
+                if (message.konfirmasi.toLowerCase() === 'saya hadir') {
                     konfirmasiIcon = '<i class="fas fa-check-circle" style="color:green;"></i>';
-                    konfirmasiText = 'Hadir';
+                    konfirmasiText = 'Saya Hadir';
                 } else {
                     konfirmasiIcon = '<i class="fas fa-times-circle" style="color:red;"></i>';
                     konfirmasiText = 'Tidak Hadir';
