@@ -145,6 +145,7 @@ function tampilkanNama() {
   const nama = getNamaDariURL();
   const namaElement = document.getElementById('nama');
   namaElement.textContent = nama;
+
 }
 console.log(" Test " , getNamaDariURL());
 

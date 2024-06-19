@@ -534,7 +534,7 @@
     <link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://inv.punakawandigital.id/wp-content/themes/hello-elementor/theme.min.css?ver=2.7.1' media='all' />
     <link rel='stylesheet' id='elementor-frontend-css' href='https://inv.punakawandigital.id/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.15.2' media='all' />
     <link rel='stylesheet' id='elementor-post-4-css' href='https://inv.punakawandigital.id/wp-content/uploads/elementor/css/post-4.css?ver=1705649289' media='all' />
-    <link rel='stylesheet' id='elementor-icons-css' href='https://inv.punakawandigital.id/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.21.0' media='all' />
+    <script type="module"> import eicons from 'https://cdn.jsdelivr.net/npm/eicons@1.0.0/+esm' </script>
     <!--  -->
     <link rel='stylesheet' id='swiper-css' href='https://inv.punakawandigital.id/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min.css?ver=5.3.6' media='all' />
     <link rel='stylesheet' id='elementor-pro-css' href='https://inv.punakawandigital.id/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.13.2' media='all' />
@@ -1156,12 +1156,12 @@
               </div>
               <div class="elementor-element elementor-element-4a6f8c35 reveal wdp-sticky-section-no elementor-widget elementor-widget-heading" data-id="4a6f8c35" data-element_type="widget" data-widget_type="heading.default">
                 <div class="elementor-widget-container">
-                  <h2 class="elementor-heading-title elementor-size-default">Muchammad Habibi Rafi</h2>
+                  <h2 class="elementor-heading-title elementor-size-default">Muchamad Habibi Rafi</h2>
                 </div>
               </div>
               <div class="elementor-element elementor-element-6a114c78 reveal wdp-sticky-section-no elementor-widget elementor-widget-text-editor" data-id="6a114c78" data-element_type="widget" data-widget_type="text-editor.default">
                 <div class="elementor-widget-container">
-                  <p>Putri Pertama dari Bapak Joko Wibowo</p>
+                  <p>Putra Pertama dari Bapak (Alm.) Joko Wibowo</p>
                   <p>&amp; Ibu Siti Mulyani</p>
                 </div>
               </div>
@@ -1767,7 +1767,7 @@ window.location.assign("https://maps.app.goo.gl/8oH4RwdBuVGaU3Rx9");
                       </div>
                       <div class="elementor-element elementor-element-19e37f52 revealin wdp-sticky-section-no elementor-widget elementor-widget-text-editor" data-id="19e37f52" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                          <p>Pukul 15.00 WIB s/d Selesai</p>
+                          <p>Pukul 10.00 WIB s/d Selesai</p>
                         </div>
                       </div>
                       <div class="elementor-element elementor-element-4b1e2b95 elementor-align-center reveal wdp-sticky-section-no elementor-widget elementor-widget-button" data-id="4b1e2b95" data-element_type="widget" data-widget_type="button.default">
@@ -1855,7 +1855,7 @@ window.location.assign("https://www.instagram.com/widityanisa10/");
                     sejak saat itu kami mulai semakin dekat dan kami saling mengungkapkan
                     perasaan yang sebenarnya dan memulai kisah cinta kami berdua
                     
-                    Dan hari hari terlewati dengan penuh kebahagiaan, meski terkadang juga 
+                    .Dan hari terlewati dengan penuh kebahagiaan, meski terkadang juga 
                     terdapat duka, namun kami masih saling memiliki
                      </p>
                 </div>
@@ -2803,10 +2803,17 @@ Aamiin ya rabbal alamin
                                   <script>
                                     var settingAutoplay = 'yes';
                                     window.settingAutoplay = settingAutoplay === 'disable' ? false : true;
+                                 
+const nama_pengirim = document.getElementById('nama_pengirim');
+nama_pengirim.value = getNamaDariURL();
                                   </script>
                                   <div id="audio-container" class="audio-box">
-                                    <audio id="song" loop>
+                                 <!--    <audio id="song" loop>
                                       <source src="https://inv.punakawandigital.id/wp-content/uploads/2023/07/Kenny-G-Forever-In-Love-1.mp3" type="audio/mp3">
+                                    </audio> -->
+
+                                       <audio id="song" loop>
+                                      <source src="./assets/music/Raffi _Ahmad_&_Nagita_Slavina.mp3" type="audio/mp3">
                                     </audio>
                                     <div class="elementor-icon-wrapper" id="unmute-sound" style="display: none;">
                                       <div class="elementor-icon elementor-animation-shrink">
