@@ -2149,23 +2149,26 @@ Aamiin ya rabbal alamin
                                             }
                                           </style>
                                           <script>
-                                            function CallLocation(){
-                console.log("Dipanggil  Lokasi ");
-            }
 
-                                            function copyText(el) {
-                                              var content = jQuery(el).siblings('div.copy-content').html()
-                                              var temp = jQuery(" < textarea > ");
-                                                jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message')) var counter = 0;
-                                                var interval = setInterval(function() {
-                                                  counter++;
-                                                  if (counter == 1) {
-                                                    jQuery(el).html(text)
-                                                  }
-                                                }, 500);
-                                              }
+function copyText(el) {
+    var content = jQuery(el).siblings('div.copy-content').html();
+    var temp = jQuery('<textarea>');
+    jQuery('body').append(temp);
+    temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+    document.execCommand("copy");
+    temp.remove();
+    var text = jQuery(el).html();
+    jQuery(el).html(jQuery(el).data('message'));
+    var counter = 0;
+    var interval = setInterval(function() {
+        counter++;
+        if (counter == 1) {
+            jQuery(el).html(text);
+            clearInterval(interval);  // Clear the interval after the message is reverted
+        }
+    }, 500);
+}
+
                                           </script>
                                         </div>
                                       </div>
@@ -2230,19 +2233,26 @@ Aamiin ya rabbal alamin
                                             }
                                           </style>
                                           <script>
-                                            function copyText(el) {
-                                              var content = jQuery(el).siblings('div.copy-content').html()
-                                              var temp = jQuery(" < textarea > ");
-                                                jQuery("body").append(temp); temp.val(content.replace(/ < br ? \/?>/g, "\n")).select(); document.execCommand("copy"); temp.remove();
-                                                var text = jQuery(el).html()
-                                                jQuery(el).html(jQuery(el).data('message')) var counter = 0;
-                                                var interval = setInterval(function() {
-                                                  counter++;
-                                                  if (counter == 1) {
-                                                    jQuery(el).html(text)
-                                                  }
-                                                }, 500);
-                                              }
+
+function copyText(el) {
+    var content = jQuery(el).siblings('div.copy-content').html();
+    var temp = jQuery('<textarea>');
+    jQuery('body').append(temp);
+    temp.val(content.replace(/<br ?\/?>/g, "\n")).select();
+    document.execCommand("copy");
+    temp.remove();
+    var text = jQuery(el).html();
+    jQuery(el).html(jQuery(el).data('message'));
+    var counter = 0;
+    var interval = setInterval(function() {
+        counter++;
+        if (counter == 1) {
+            jQuery(el).html(text);
+            clearInterval(interval);  // Clear the interval after the message is reverted
+        }
+    }, 500);
+}
+
                                           </script>
                                         </div>
                                       </div>
@@ -2271,7 +2281,7 @@ Aamiin ya rabbal alamin
                                       <div class="elementor-element elementor-element-2197e4ee wdp-sticky-section-no elementor-widget elementor-widget-text-editor" data-id="2197e4ee" data-element_type="widget" data-widget_type="text-editor.default">
                                         <div class="elementor-widget-container">
                                           <p>Nama Penerima : Rafi</p>
-                                          <p>No. HP : -</p>
+                                          <p>No. HP : +62 89604118404</p>
                                           <p>
 
                                             Balai RW 008 Griya Kebon Agung
