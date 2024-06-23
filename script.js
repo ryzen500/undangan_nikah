@@ -35,7 +35,11 @@ function Simpan(){
 
     if (formData.konfirmasi == null) {
 
-        alert("Harap Isi Konfirmasi Hadir");
+        // alert("Harap Isi Konfirmasi Hadir");
+        Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "Harap Isi Konfirmasi Hadir!"});
     }else{
 
 
@@ -49,6 +53,11 @@ function Simpan(){
         success: function (response) {
          
           console.log("Berhasil Kirim");
+          Swal.fire({
+          title: "Komentar Berhasil Disimpan!",
+          text: "Komentar kamu Berhasil Disimpan !",
+          icon: "success"
+        });
           // Clean Call the order function 
 
           GetAllMessages();
