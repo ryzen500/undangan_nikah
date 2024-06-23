@@ -33,6 +33,12 @@ function Simpan(){
         konfirmasi: jQuery('#konfirmasi').val()
     };
 
+    if (formData.konfirmasi == null) {
+
+        alert("Harap Isi Konfirmasi Hadir");
+    }else{
+
+
     console.log("Form Data yang dikirimkan ", formData);
 
     jQuery.ajax({
@@ -54,7 +60,7 @@ function Simpan(){
     });
 
 
-
+}
 
 }
 function GetAllMessages() {
@@ -73,6 +79,7 @@ function GetAllMessages() {
 
             // Iterate through each message in the response
             response.forEach(function(message) {
+               console.log(message);
                 var konfirmasiIcon;
                 var konfirmasiText;
 
