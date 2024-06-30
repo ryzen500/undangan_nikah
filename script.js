@@ -1,5 +1,5 @@
 // Set the target date and time for the countdown
-const targetDate = new Date("2024-06-30T07:30:00"); // Example: New Year's Eve 2024
+var targetDate = new Date("2024-06-30T16:00:00"); // Example: New Year's Eve 2024
 
 // Function to update the countdown timer
 function updateCountdown() {
@@ -7,7 +7,8 @@ function updateCountdown() {
     const timeDifference = targetDate - now; // Time difference in milliseconds
 
     if (timeDifference <= 0) {
-        document.getElementById("timer").innerText = "Event has started!";
+        console.log("Waktu Sudah Habis");
+        // document.getElementById("timer").innerText = "Event has started!";
         return; // Exit if the countdown is over
     }
 
@@ -162,6 +163,11 @@ function tampilkanNama() {
   const namaElement = document.getElementById('nama');
   namaElement.textContent = nama;
 
+    const namaElementHeader = document.getElementById('lalala');
+  namaElementHeader.textContent = nama;
+  console.log("nama", nama);
+  console.log("panggil Nama Element ", namaElementHeader);
+
 }
 console.log(" Test " , getNamaDariURL());
 
@@ -171,3 +177,4 @@ console.log(" Test " , getNamaDariURL());
 setInterval(updateCountdown, 1000);
 tampilkanNama();
 GetAllMessages();
+
